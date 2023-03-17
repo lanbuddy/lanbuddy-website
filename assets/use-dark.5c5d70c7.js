@@ -1,0 +1,1 @@
+import{c as r}from"./QBtn.d7ca973d.js";import{h as s,c as t}from"./index.6754c7dd.js";const c=s("div",{class:"q-space"});var u=r({name:"QSpace",setup(){return()=>c}});const p={dark:{type:Boolean,default:null}};function d(a,e){return t(()=>a.dark===null?e.dark.isActive:a.dark)}export{u as Q,d as a,p as u};
