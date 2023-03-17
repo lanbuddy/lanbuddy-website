@@ -35,7 +35,7 @@ jobs:
 
       # Build the Quasar code
       - name: Build Quasar code
-        run: yarn run build
+        run: yarn quasar build spa
 
       # Deploy to Github Pages using github-pages-deploy-action
       - name: Deploy to Github Pages
