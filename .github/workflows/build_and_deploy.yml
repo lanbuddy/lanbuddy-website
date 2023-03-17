@@ -1,0 +1,46 @@
+name: Build and Deploy to Github Pages
+
+on:
+  push:
+    branches:
+      - main # trigger workflow only on main branch changes
+  pull_request:
+    branches:
+      - main # trigger workflow only on main branch pull requests
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code to the runner
+      - name: Checkout code
+        uses: actions/checkout@v3.4.0
+
+      # Set up Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3.6.0
+        with:
+          node-version: '18.x'
+
+      # Install dependencies
+      - name: Install dependencies
+        uses: actions/cache@v2.1.8
+        with:
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - run: yarn install
+
+      # Build the Quasar code
+      - name: Build Quasar code
+        run: yarn run build
+
+      # Deploy to Github Pages using github-pages-deploy-action
+      - name: Deploy to Github Pages
+        uses: JamesIves/github-pages-deploy-action@4.4.1
+        with:
+          branch: gh-pages
+          folder: dist/spa # adjust this based on your Quasar configuration
+          token: ${{ secrets.GITHUB_TOKEN }}
