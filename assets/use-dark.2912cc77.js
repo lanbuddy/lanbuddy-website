@@ -1,0 +1,1 @@
+import{k as r,h as s,c as t}from"./index.b409df32.js";var n=r({name:"QSpace",setup(){const a=s("div",{class:"q-space"});return()=>a}});const o={dark:{type:Boolean,default:null}};function u(a,e){return t(()=>a.dark===null?e.dark.isActive:a.dark)}export{n as Q,u as a,o as u};
