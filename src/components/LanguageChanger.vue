@@ -12,7 +12,7 @@
     @input="changeLanguage"
   >
     <template #selected>
-      <q-avatar size="32px">
+      <q-avatar size="32px" rounded>
         <q-icon
           size="48px"
           style="top: -8px; position: relative"
@@ -23,7 +23,7 @@
     <template #option="scope">
       <q-item v-bind="scope.itemProps">
         <q-item-section avatar>
-          <q-avatar size="32px">
+          <q-avatar size="32px" rounded>
             <q-icon
               size="48px"
               style="top: -8px; position: relative"

@@ -1,6 +1,6 @@
 <template>
   <q-page class="">
-    <div style="height: 600px" class="bg-primary row reverse">
+    <div style="height: 600px" class="bg-dark row reverse">
       <q-space class="gt-sm"></q-space>
       <div class="col-xs-12 col-md-6 col-lg-4 flex flex-center">
         <img height="256" src="~assets/lanbuddy-logo-round-bordered.png" />
@@ -14,13 +14,12 @@
             {{ $t("client_hero.description") }}
           </p>
           <q-btn
-            rounded
-            color="blue"
+            color="primary"
             size="lg"
             no-caps
             class="q-mt-md"
             type="a"
-            href="https://github.com/lanbuddy/lanbuddy-client/releases/download/latest/lanbuddy-setup.exe"
+            href="https://github.com/lanbuddy/lanbuddy-client/releases"
           >
             <div class="col-12">
               <q-icon size="sm" class="q-pr-xs" name="mdi-download"></q-icon
@@ -31,11 +30,10 @@
             </div>
           </q-btn>
           <q-btn
-            rounded
             size="lg"
             no-caps
+            color="secondary"
             class="q-mt-md q-ml-md"
-            outline
             type="a"
             href="https://github.com/lanbuddy"
           >
@@ -59,11 +57,10 @@
         </h1>
         <div class="q-col-gutter-sm q-pt-lg row text-left justify-center">
           <div class="col-xs-12 col-md-4">
-            <q-card style="height: 420px">
-              <q-img
-                height="200px"
-                src="https://source.unsplash.com/random/300%C3%97300/?simple"
-              ></q-img>
+            <q-card style="height: 350px">
+              <div class="full-width flex flex-center" style="height: 150px">
+                <q-icon name="mdi-store" size="100px" />
+              </div>
 
               <q-card-section>
                 <h2 class="text-h5">{{ $t("features.store_catchphrase") }}</h2>
@@ -74,11 +71,10 @@
             </q-card>
           </div>
           <div class="col-xs-12 col-md-4">
-            <q-card style="height: 420px">
-              <q-img
-                height="200px"
-                src="https://source.unsplash.com/random/300%C3%97300/?speed"
-              ></q-img>
+            <q-card style="height: 350px">
+              <div class="full-width flex flex-center" style="height: 150px">
+                <q-icon name="mdi-speedometer" size="100px" />
+              </div>
 
               <q-card-section>
                 <h2 class="text-h5">{{ $t("features.speed_catchphrase") }}</h2>
@@ -89,14 +85,15 @@
             </q-card>
           </div>
           <div class="col-xs-12 col-md-4">
-            <q-card style="height: 420px">
-              <q-img
-                height="200px"
-                src="https://source.unsplash.com/random/300%C3%97300/?chat"
-              ></q-img>
+            <q-card style="height: 350px">
+              <div class="full-width flex flex-center" style="height: 150px">
+                <q-icon name="mdi-chat" size="100px" />
+              </div>
 
               <q-card-section>
-                <h2 class="text-h5">{{ $t("features.chat_catchphrase") }}</h2>
+                <h2 class="text-h5">
+                  {{ $t("features.chat_catchphrase") }}
+                </h2>
                 <p>
                   {{ $t("features.chat_description") }}
                 </p></q-card-section
